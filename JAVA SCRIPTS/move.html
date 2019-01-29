@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>056_Move_Array_Elements</title>
+    <script>
+        function move(arr, firstIndex, secondIndex) {
+            if (firstIndex < 0)
+                firstIndex += arr.length;
+            if (secondIndex < 0)
+                secondIndex += arr.length;
+            arr.splice(secondIndex, 0, arr.splice(firstIndex, 1)[0]);
+            return arr;
+        }
+        arr = [10, 20, 30, 40, 50];
+        console.log("Intial Array : " + arr);
+        console.log("New Array : " + move(arr, -1, -2));
+
+    </script>
+</head>
+
+<body>
+    <h1>Move Array Element</h1>
+    <!-- 1602-16-737-056 -->
+</body>
+
+</html>

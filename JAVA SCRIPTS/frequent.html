@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>056_Most_Frequent_Item_In_Array</title>
+    <script>
+        var arr = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+        var mostFrequent = 0;
+        var freq = 0;
+        var item = 0;
+        for (var i = 0; i < arr.length; i++) {
+            for (var j = i + 1; j < arr.length; j++) {
+                if (arr[i] === arr[j])
+                    freq++;
+            }
+            if (freq > mostFrequent) {
+                mostFrequent = freq;
+                item = arr[i];
+            }
+            freq = 0;
+        }
+        console.log("The most frequent item of array " + arr + " is " + item + " with a frequency of " + (mostFrequent + 1));
+
+    </script>
+</head>
+
+<body>
+    <h1>Most Frequent Item Of Array</h1>
+    <!-- 1602-16-737-056 -->
+</body>
+
+</html>
